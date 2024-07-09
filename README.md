@@ -1,10 +1,11 @@
  # CODETECH-INTERNSHIP-IOT-Task1
-**Name**: GOPINATH V
-**Company**: CODETECH IT SOLUTIONS
-**ID**: CT08DS1826
-**Domain**: Internet of Things
-**Duration**: June to July 2024
-**Mentor**: Mohammed Muzammil Ahmed
+
+**Name**: GOPINATH V.
+**Company**: CODETECH IT SOLUTIONS.
+**ID**: CT08DS1826.
+**Domain**: Internet of Things.
+**Duration**: June to July 2024.
+**Mentor**: Mohammed Muzammil Ahmed.
 
 ## Overview of the Project
 **Project** Weather Montioring Station using ESP32 with DHT11 Sensor and Thingspeak"
