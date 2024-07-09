@@ -86,7 +86,7 @@ The primary objective of the program is to periodically read temperature and hum
 ● Arduino IDE
 ● Thingspeak account
 
-<h7> Steps to do this project:
+##### Steps to do this project:
 1. Before starting this installation procedure, make sure you have the latest version of the Arduino IDE installed in your computer. If you don’t, uninstall it and install it again. Otherwise, it may not work.
 
 2. For installing ESP32 in Arduino IDE go to the Arduino IDE in that go to File->Prefernces
@@ -111,14 +111,16 @@ The primary objective of the program is to periodically read temperature and hum
 
 12. Our work is done.
 
- ######## Circuit Diagram
+ ##### Circuit Diagram
 ![alt text](https://private-user-images.githubusercontent.com/167459628/346424176-31074f9d-4207-41e2-9e1e-be4cc3a4eb41.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjA0OTU0MzYsIm5iZiI6MTcyMDQ5NTEzNiwicGF0aCI6Ii8xNjc0NTk2MjgvMzQ2NDI0MTc2LTMxMDc0ZjlkLTQyMDctNDFlMi05ZTFlLWJlNGNjM2E0ZWI0MS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNzA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDcwOVQwMzE4NTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02MTYxNDk1YzViMWE1NmU5M2IyNDk1MjA4MzlhODljYjYwNDMwNThlMDQ2NWIwNmYzNzcxMmU0N2FkNTlkM2M0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.beehC1bm07vRQAiPhVo_OsC5A0B5YVuXo7kkeEyZWKw)
 
-Output in Serail Monitor
-image
+#### Output in Serail Monitor
+![alt text](https://private-user-images.githubusercontent.com/167459628/346424702-1d3f23ea-c37e-4540-86ad-ebab651e06bb.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjA0OTU0MzYsIm5iZiI6MTcyMDQ5NTEzNiwicGF0aCI6Ii8xNjc0NTk2MjgvMzQ2NDI0NzAyLTFkM2YyM2VhLWMzN2UtNDU0MC04NmFkLWViYWI2NTFlMDZiYi5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNzA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDcwOVQwMzE4NTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT04OTlhMmU2YzVkMWQ4ODE5YTFiYjRkMTZhZTBjYzgyNWM0ODJiMzc4NjA0OGY3ZmM5ZmE5OWI0NzkxMjk3MzYxJlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.eIl8SnNcNj9wpuT0vUid-HHK9PXXd08vbElK7kGu7ms)
 
-Output in ThingSpeak
-image
+#### Output in ThingSpeak
 
-Conclusion
+![alt text](https://private-user-images.githubusercontent.com/167459628/346429572-2e45f144-4980-4f08-bfdb-e0d507aed5dc.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjA0OTU0MzYsIm5iZiI6MTcyMDQ5NTEzNiwicGF0aCI6Ii8xNjc0NTk2MjgvMzQ2NDI5NTcyLTJlNDVmMTQ0LTQ5ODAtNGYwOC1iZmRiLWUwZDUwN2FlZDVkYy5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNzA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDcwOVQwMzE4NTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT05MWYxN2U4MDRiZjE1MzVlZTA2ZGQyNDQ2ZTI1MjcyZmVmNjJkZDE1M2JhY2UyOTM5Zjc4ODAyNGQwMjFjYWE3JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.binmP2eSBLOFvccZUIlakkLh-0Ded5Fl7d2dTLIk2EQ)
+
+#### Conclusion
+
 This project successfully demonstrates how to integrate the ESP32 microcontroller with a DHT11 sensor and the ThingSpeak cloud service for real-time environmental monitoring. By leveraging WiFi connectivity and cloud-based data logging, the system provides an efficient solution for various IoT applications. The concise code structure and use of libraries make it adaptable for a wide range of projects. With minor adjustments, it can be tailored to specific use cases, from home automation to industrial monitoring.
