@@ -1,39 +1,39 @@
- #CODETECH-INTERNSHIP-IOT-Task1
-"Name": GOPINATH V
-"Company": CODETECH IT SOLUTIONS
-"ID": CT08DS1826
-"Domain": Internet of Things
-"Duration": June to July 2024
-"Mentor": Mohammed Muzammil Ahmed
+ # CODETECH-INTERNSHIP-IOT-Task1
+**Name**: GOPINATH V
+**Company**: CODETECH IT SOLUTIONS
+**ID**: CT08DS1826
+**Domain**: Internet of Things
+**Duration**: June to July 2024
+**Mentor**: Mohammed Muzammil Ahmed
 
-##Overview of the Project
-"Project: Weather Montioring Station using ESP32 with DHT11 Sensor and Thingspeak"
-###Objective
+## Overview of the Project
+**Project** Weather Montioring Station using ESP32 with DHT11 Sensor and Thingspeak"
+### Objective
 The primary objective of the program is to periodically read temperature and humidity data from a DHT11 sensor, calculate the heat index, and transmit these values to a ThingSpeak channel for monitoring and analysis.
 
-####Key Activities
-"Initialize Serial Communication:"
+#### Key Activities
+**Initialize Serial Communication:**
 
--Sets up a serial connection for debugging and monitoring outputs using Serial.begin(115200).
+- Sets up a serial connection for debugging and monitoring outputs using Serial.begin(115200).
 
-"Configure WiFi Mode:"
+**Configure WiFi Mode:**
 
--Sets the ESP32 to connect to an existing WiFi network using WiFi.mode(WIFI_STA).
+- Sets the ESP32 to connect to an existing WiFi network using WiFi.mode(WIFI_STA).
 
-"Start ThingSpeak Communication:"
+**Start ThingSpeak Communication:**
 
--Initializes the connection to ThingSpeak for data uploads with ThingSpeak.begin(client).
+- Initializes the connection to ThingSpeak for data uploads with ThingSpeak.begin(client).
 
-"Initialize DHT Sensor:"
+**Initialize DHT Sensor:**
 
--Prepares the DHT11 sensor for reading temperature and humidity using dht.begin().
+- Prepares the DHT11 sensor for reading temperature and humidity using dht.begin().
 
-"Check WiFi Connection:"
+**Check WiFi Connection:**
 
--Verifies and attempts to reconnect to WiFi if the connection is lost using WiFi.status().
-"Read Sensor Data:"
+- Verifies and attempts to reconnect to WiFi if the connection is lost using WiFi.status().
+**Read Sensor Data:**
 
--Retrieves temperature and humidity from the DHT11 sensor using dht.readHumidity() and dht.readTemperature().
+- Retrieves temperature and humidity from the DHT11 sensor using dht.readHumidity() and dht.readTemperature().
 
 "Calculate Heat Index:"
 
