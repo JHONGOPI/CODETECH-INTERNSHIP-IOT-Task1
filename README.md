@@ -86,33 +86,33 @@ The primary objective of the program is to periodically read temperature and hum
 ● Arduino IDE
 ● Thingspeak account
 
-###### Steps to do this project:
+####### Steps to do this project:
 1. Before starting this installation procedure, make sure you have the latest version of the Arduino IDE installed in your computer. If you don’t, uninstall it and install it again. Otherwise, it may not work.
 
 2. For installing ESP32 in Arduino IDE go to the Arduino IDE in that go to File->Prefernces
 
-In that enter https://dl.espressif.com/dl/package_esp32_index.json, http://arduino.esp8266.com/stable/package_esp8266com_index.json into the "Additional Board Manager URLs" field and click "OK" button.
+3. In that enter https://dl.espressif.com/dl/package_esp32_index.json, http://arduino.esp8266.com/stable/package_esp8266com_index.json into the "Additional Board Manager URLs" field and click "OK" button.
 
-Open the Boards Manager. Go to Tools > Board > Boards Manager
+4. Open the Boards Manager. Go to Tools > Board > Boards Manager
 
-Search for ESP32 and press install button for the ESP32 by Espressif Systems.
+5. Search for ESP32 and press install button for the ESP32 by Espressif Systems.
 
-That's it. It should be ESP32 Library is installed after a few seconds
+6. That's it. It should be ESP32 Library is installed after a few seconds
 
-Go to Tools > Manage Libraries > Library Manager search for DHT on the search box and install the DHT library from Adafruit.
+7. Go to Tools > Manage Libraries > Library Manager search for DHT on the search box and install the DHT library from Adafruit.
 
-After installing the DHT Library from Adafruit, type Adafruit Unified Sensor in the search box. Scroll all the way down to find the library and install it.
+8. After installing the DHT Library from Adafruit, type Adafruit Unified Sensor in the search box. Scroll all the way down to find the library and install it.
 
-To send Sensor readings to ThingSpeak, we'll use the ThingSpeak-Arduino Library. You can install this library through the Arduino Library manager. Go to Sketch > Include Library > Manage Libraries... and search for "ThingSpeak" in the library manager install the thingspeak library by Mathworks.
+9. To send Sensor readings to ThingSpeak, we'll use the ThingSpeak-Arduino Library. You can install this library through the Arduino Library manager. Go to Sketch > Include Library > Manage Libraries... and search for "ThingSpeak" in the library manager install the thingspeak library by Mathworks.
 
-To use Thingspeak, you must sign in with your existing Mathworks account or create a new one. Non-commercial users may use ThingSpeak for free. Free accounts offer limits on certain functionality. Commercial users are eligible for a time-limited free evaluation. To get full access to the MATLAB analysis features on ThingSpeak, login to the ThingSpeak using the email address associated with your university or organization. To send data faster to ThingSpeak or to send more data from more devices, consider the paid license options for commercial, academic, home and student usage.
+10. To use Thingspeak, you must sign in with your existing Mathworks account or create a new one. Non-commercial users may use ThingSpeak for free. Free accounts offer limits on certain functionality. Commercial users are eligible for a time-limited free evaluation. To get full access to the MATLAB analysis features on ThingSpeak, login to the ThingSpeak using the email address associated with your university or organization. To send data faster to ThingSpeak or to send more data from more devices, consider the paid license options for commercial, academic, home and student usage.
 
-Go to My Channels > press New Channel > Create Name > Create fields based on your needs > Select Save Channel your channel is created in that copy paste the Channel Id and Write API key, as this API keys enable you to write data to a channel or read data from a channel. API keys are auto-generated when you create a new channel.
+11. Go to My Channels > press New Channel > Create Name > Create fields based on your needs > Select Save Channel your channel is created in that copy paste the Channel Id and Write API key, as this API keys enable you to write data to a channel or read data from a channel. API keys are auto-generated when you create a new channel.
 
-Our work is done.
+12. Our work is done.
 
-Circuit Diagram
-image
+ ######## Circuit Diagram
+![alt text](https://private-user-images.githubusercontent.com/167459628/346424176-31074f9d-4207-41e2-9e1e-be4cc3a4eb41.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MjA0OTU0MzYsIm5iZiI6MTcyMDQ5NTEzNiwicGF0aCI6Ii8xNjc0NTk2MjgvMzQ2NDI0MTc2LTMxMDc0ZjlkLTQyMDctNDFlMi05ZTFlLWJlNGNjM2E0ZWI0MS5wbmc_WC1BbXotQWxnb3JpdGhtPUFXUzQtSE1BQy1TSEEyNTYmWC1BbXotQ3JlZGVudGlhbD1BS0lBVkNPRFlMU0E1M1BRSzRaQSUyRjIwMjQwNzA5JTJGdXMtZWFzdC0xJTJGczMlMkZhd3M0X3JlcXVlc3QmWC1BbXotRGF0ZT0yMDI0MDcwOVQwMzE4NTZaJlgtQW16LUV4cGlyZXM9MzAwJlgtQW16LVNpZ25hdHVyZT02MTYxNDk1YzViMWE1NmU5M2IyNDk1MjA4MzlhODljYjYwNDMwNThlMDQ2NWIwNmYzNzcxMmU0N2FkNTlkM2M0JlgtQW16LVNpZ25lZEhlYWRlcnM9aG9zdCZhY3Rvcl9pZD0wJmtleV9pZD0wJnJlcG9faWQ9MCJ9.beehC1bm07vRQAiPhVo_OsC5A0B5YVuXo7kkeEyZWKw)
 
 Output in Serail Monitor
 image
