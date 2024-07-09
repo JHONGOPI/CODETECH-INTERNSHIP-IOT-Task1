@@ -1,32 +1,92 @@
-# Prerequisites
-*.d
+#include <WiFi.h> // Include WiFi library for network connection
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+#include "ThingSpeak.h" //  // Include ThingSpeak library for cloud data storage
 
-# Precompiled Headers
-*.gch
-*.pch
+#include "DHT.h" // Include DHT library for sensor communication
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
+// Define DHT sensor pin and type
+#define DHTPIN 4              // GPIO 4 Pin in ESP32 is connected to the DHT sensor
+#define DHTTYPE DHT11         // DHT sensor type (DHT11, DHT21, DHT22 -> DHT11 in this case)
 
-# Fortran module files
-*.mod
-*.smod
+// Create an instance of the DHT sensor object
+DHT dht(DHTPIN, DHTTYPE);
 
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
+const char * ssid = "Dhanush";   // your network SSID (name) 
+const char * password = "Dhanush@2004";   // your network password
+WiFiClient  client;  // Create a WiFi client object for network communication
 
-# Executables
-*.exe
-*.out
-*.app
+// ThingSpeak channel details (replace with your actual values)
+unsigned long myChannelNumber = 2059937;   // Your ThingSpeak channel ID
+const char * myWriteAPIKey = "9ZV2EO9PLYYMQJHU";   // Your ThingSpeak write API key
+
+//Timer Variables
+
+unsigned long lastTime = 0;   // Stores the last time data was sent
+unsigned long timerDelay = 30000;  // Delay between data transmissions (30 seconds)
+
+// Sensor data variables
+
+float Humidity;
+float Temperature_in_C;
+float Heat_Index;
+
+void setup() 
+{
+  Serial.begin(115200);  // Initialize serial communication for debugging
+  WiFi.mode(WIFI_STA);   // Set WiFi mode to station (client)
+  ThingSpeak.begin(client);  // Initialize ThingSpeak communication
+  dht.begin();  // Initialize the DHT sensor
+}
+
+void loop() 
+{
+  if ((millis() - lastTime) > timerDelay) 
+  {
+  // Connect or reconnect to WiFi
+    if(WiFi.status() != WL_CONNECTED)
+    {
+      Serial.print("Attempting to connect");
+      while(WiFi.status() != WL_CONNECTED)
+      {
+        WiFi.begin(ssid, password); // Connect to WPA/WPA2 network. Change this line if using open or WEP network
+        delay(5000);     
+      } 
+    Serial.println("\nConnected.");
+    }
+
+  // Read sensor data
+
+  Humidity = dht.readHumidity();
+  Temperature_in_C = dht.readTemperature();
+  Heat_Index = dht.computeHeatIndex(Temperature_in_C, Humidity, false);  // Calculate heat index in Celsius
+
+  // Print sensor data to serial monitor for debugging
+
+  Serial.print("Humidity: ");
+  Serial.println(Humidity);
+  Serial.print("Temperature (°C): ");
+  Serial.println(Temperature_in_C);
+  Serial.print("Heat Index: ");
+  Serial.println(Heat_Index);
+
+  // Write to ThingSpeak. There are up to 8 fields in a channel, allowing you to store up to 8 different pieces of information in a channel.
+  
+  // Update ThingSpeak channel with sensor data
+
+  ThingSpeak.setField(1,Humidity);
+  ThingSpeak.setField(2,Temperature_in_C);
+  ThingSpeak.setField(3,Heat_Index);
+
+  int x = ThingSpeak.writeFields(myChannelNumber, myWriteAPIKey);
+
+  if(x > 0)
+  {
+    Serial.println("Channel update successful.");
+  }
+  else
+  {
+    Serial.println("Problem updating channel. HTTP error code " + String(x));
+  }
+  lastTime=millis();  // Update last time data was sent
+  }
+}
