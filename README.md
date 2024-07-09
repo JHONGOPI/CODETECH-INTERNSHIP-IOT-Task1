@@ -86,7 +86,7 @@ The primary objective of the program is to periodically read temperature and hum
 ● Arduino IDE
 ● Thingspeak account
 
-####### Steps to do this project:
+<h7> Steps to do this project:
 1. Before starting this installation procedure, make sure you have the latest version of the Arduino IDE installed in your computer. If you don’t, uninstall it and install it again. Otherwise, it may not work.
 
 2. For installing ESP32 in Arduino IDE go to the Arduino IDE in that go to File->Prefernces
