@@ -8,7 +8,7 @@
 **Mentor**: Mohammed Muzammil Ahmed.
 
 ## Overview of the Project
-**Project** Weather Montioring Station using ESP32 with DHT11 Sensor and Thingspeak"
+**Project : Weather Montioring Station using ESP32 with DHT11 Sensor and Thingspeak**
 ### Objective
 The primary objective of the program is to periodically read temperature and humidity data from a DHT11 sensor, calculate the heat index, and transmit these values to a ThingSpeak channel for monitoring and analysis.
 
@@ -36,47 +36,47 @@ The primary objective of the program is to periodically read temperature and hum
 
 - Retrieves temperature and humidity from the DHT11 sensor using dht.readHumidity() and dht.readTemperature().
 
-"Calculate Heat Index:"
+**Calculate Heat Index:**
 
--Computes the perceived temperature based on humidity and temperature using dht.computeHeatIndex().
-Print Data to Serial Monitor:
+- Computes the perceived temperature based on humidity and temperature using dht.computeHeatIndex().
+**Print Data to Serial Monitor:**
 
--Outputs the sensor readings and computed heat index to the serial monitor for debugging with Serial.print().
+- Outputs the sensor readings and computed heat index to the serial monitor for debugging with Serial.print().
 
-"Upload Data to ThingSpeak:"
+**Upload Data to ThingSpeak:**
 
--Sends the sensor readings to a ThingSpeak channel using ThingSpeak.writeFields().
--Update Timer: - Resets the timer to control the interval between data transmissions using lastTime = millis().
+- Sends the sensor readings to a ThingSpeak channel using ThingSpeak.writeFields().
+- Update Timer: - Resets the timer to control the interval between data transmissions using lastTime = millis().
 
-#####Technologies Used
-"ESP32:"
+##### Technologies Used
+**ESP32:**
 
--A microcontroller with integrated WiFi and Bluetooth, used for IoT applications.
-"DHT11 Sensor:"
+- A microcontroller with integrated WiFi and Bluetooth, used for IoT applications.
+**DHT11 Sensor:**
 
--A digital sensor that measures temperature and humidity.
-"WiFi Library (WiFi.h):"
+- A digital sensor that measures temperature and humidity.
+**WiFi Library (WiFi.h):**
 
--Enables the ESP32 to connect to WiFi networks.
-"ThingSpeak Library (ThingSpeak.h):"
+- Enables the ESP32 to connect to WiFi networks.
+**ThingSpeak Library (ThingSpeak.h):**
 
--Facilitates sending data to the ThingSpeak cloud service for storage and visualization.
-"DHT Library (DHT.h):"
+- Facilitates sending data to the ThingSpeak cloud service for storage and visualization.
+**DHT Library (DHT.h):**
 
--Provides functions to interact with DHT sensors, like reading temperature and humidity.
-"Serial Communication:"
+- Provides functions to interact with DHT sensors, like reading temperature and humidity.
+**Serial Communication:**
 
--Used for debugging by sending data to a connected computer via the serial port.
-"Arduino IDE:"
+- Used for debugging by sending data to a connected computer via the serial port.
+**Arduino IDE:**
 
--The integrated development environment used to write and upload code to the ESP32.
-"C++ Programming Language:"
+- The integrated development environment used to write and upload code to the ESP32.
+**C++ Programming Language:**
 
--The language used to write the program for the ESP32.
-"ThingSpeak:"
+- The language used to write the program for the ESP32.
+**ThingSpeak:**
 
--An IoT cloud platform for aggregating, visualizing, and analyzing live data streams.
-######Hardware and Software Required
+- An IoT cloud platform for aggregating, visualizing, and analyzing live data streams.
+###### Hardware and Software Required
 ● ESP32
 ● DHT22 (Humidity+Temperature)
 ● 10K Resistor - 1 Qty
@@ -86,10 +86,10 @@ Print Data to Serial Monitor:
 ● Arduino IDE
 ● Thingspeak account
 
-Steps to do this project:
-Before starting this installation procedure, make sure you have the latest version of the Arduino IDE installed in your computer. If you don’t, uninstall it and install it again. Otherwise, it may not work.
+###### Steps to do this project:
++ Before starting this installation procedure, make sure you have the latest version of the Arduino IDE installed in your computer. If you don’t, uninstall it and install it again. Otherwise, it may not work.
 
-For installing ESP32 in Arduino IDE go to the Arduino IDE in that go to File->Prefernces
++ For installing ESP32 in Arduino IDE go to the Arduino IDE in that go to File->Prefernces
 
 In that enter https://dl.espressif.com/dl/package_esp32_index.json, http://arduino.esp8266.com/stable/package_esp8266com_index.json into the "Additional Board Manager URLs" field and click "OK" button.
 
